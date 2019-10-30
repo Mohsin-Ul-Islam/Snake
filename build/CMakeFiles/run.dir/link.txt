@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/run.dir/src/main.o CMakeFiles/run.dir/src/Game.o CMakeFiles/run.dir/src/Window.o CMakeFiles/run.dir/src/Controller.o CMakeFiles/run.dir/src/Snake.o  -o run 

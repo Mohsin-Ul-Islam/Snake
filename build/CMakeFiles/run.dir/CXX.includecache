@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/Projects/Snake/src/Controller.cpp
+
+/root/Projects/Snake/src/Game.cpp
+
+/root/Projects/Snake/src/Snake.cpp
+
+/root/Projects/Snake/src/Window.cpp
+
+/root/Projects/Snake/src/main.cpp
+
