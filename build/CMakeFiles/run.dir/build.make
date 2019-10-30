@@ -57,88 +57,93 @@ include CMakeFiles/run.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/run.dir/flags.make
 
-CMakeFiles/run.dir/src/main.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/main.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/run.dir/src/main.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/main.o -c /root/Projects/Snake/src/main.cpp
+CMakeFiles/run.dir/src/main.cpp.o: CMakeFiles/run.dir/flags.make
+CMakeFiles/run.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/run.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/main.cpp.o -c /root/Projects/Snake/src/main.cpp
 
-CMakeFiles/run.dir/src/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/main.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/main.cpp > CMakeFiles/run.dir/src/main.i
+CMakeFiles/run.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/main.cpp > CMakeFiles/run.dir/src/main.cpp.i
 
-CMakeFiles/run.dir/src/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/main.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/main.cpp -o CMakeFiles/run.dir/src/main.s
+CMakeFiles/run.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/main.cpp -o CMakeFiles/run.dir/src/main.cpp.s
 
-CMakeFiles/run.dir/src/Game.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/Game.o: ../src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run.dir/src/Game.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Game.o -c /root/Projects/Snake/src/Game.cpp
+CMakeFiles/run.dir/src/Game.cpp.o: CMakeFiles/run.dir/flags.make
+CMakeFiles/run.dir/src/Game.cpp.o: ../src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run.dir/src/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Game.cpp.o -c /root/Projects/Snake/src/Game.cpp
 
-CMakeFiles/run.dir/src/Game.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Game.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Game.cpp > CMakeFiles/run.dir/src/Game.i
+CMakeFiles/run.dir/src/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Game.cpp > CMakeFiles/run.dir/src/Game.cpp.i
 
-CMakeFiles/run.dir/src/Game.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Game.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Game.cpp -o CMakeFiles/run.dir/src/Game.s
+CMakeFiles/run.dir/src/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Game.cpp -o CMakeFiles/run.dir/src/Game.cpp.s
 
-CMakeFiles/run.dir/src/Window.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/Window.o: ../src/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run.dir/src/Window.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Window.o -c /root/Projects/Snake/src/Window.cpp
+CMakeFiles/run.dir/src/Window.cpp.o: CMakeFiles/run.dir/flags.make
+CMakeFiles/run.dir/src/Window.cpp.o: ../src/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run.dir/src/Window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Window.cpp.o -c /root/Projects/Snake/src/Window.cpp
 
-CMakeFiles/run.dir/src/Window.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Window.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Window.cpp > CMakeFiles/run.dir/src/Window.i
+CMakeFiles/run.dir/src/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Window.cpp > CMakeFiles/run.dir/src/Window.cpp.i
 
-CMakeFiles/run.dir/src/Window.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Window.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Window.cpp -o CMakeFiles/run.dir/src/Window.s
+CMakeFiles/run.dir/src/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Window.cpp -o CMakeFiles/run.dir/src/Window.cpp.s
 
-CMakeFiles/run.dir/src/Controller.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/Controller.o: ../src/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run.dir/src/Controller.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Controller.o -c /root/Projects/Snake/src/Controller.cpp
+CMakeFiles/run.dir/src/Controller.cpp.o: CMakeFiles/run.dir/flags.make
+CMakeFiles/run.dir/src/Controller.cpp.o: ../src/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run.dir/src/Controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Controller.cpp.o -c /root/Projects/Snake/src/Controller.cpp
 
-CMakeFiles/run.dir/src/Controller.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Controller.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Controller.cpp > CMakeFiles/run.dir/src/Controller.i
+CMakeFiles/run.dir/src/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Controller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Controller.cpp > CMakeFiles/run.dir/src/Controller.cpp.i
 
-CMakeFiles/run.dir/src/Controller.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Controller.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Controller.cpp -o CMakeFiles/run.dir/src/Controller.s
+CMakeFiles/run.dir/src/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Controller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Controller.cpp -o CMakeFiles/run.dir/src/Controller.cpp.s
 
-CMakeFiles/run.dir/src/Snake.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/Snake.o: ../src/Snake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run.dir/src/Snake.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Snake.o -c /root/Projects/Snake/src/Snake.cpp
+CMakeFiles/run.dir/src/Snake.cpp.o: CMakeFiles/run.dir/flags.make
+CMakeFiles/run.dir/src/Snake.cpp.o: ../src/Snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run.dir/src/Snake.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/Snake.cpp.o -c /root/Projects/Snake/src/Snake.cpp
 
-CMakeFiles/run.dir/src/Snake.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Snake.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Snake.cpp > CMakeFiles/run.dir/src/Snake.i
+CMakeFiles/run.dir/src/Snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/Snake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Projects/Snake/src/Snake.cpp > CMakeFiles/run.dir/src/Snake.cpp.i
 
-CMakeFiles/run.dir/src/Snake.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Snake.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Snake.cpp -o CMakeFiles/run.dir/src/Snake.s
+CMakeFiles/run.dir/src/Snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/Snake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Projects/Snake/src/Snake.cpp -o CMakeFiles/run.dir/src/Snake.cpp.s
 
 # Object files for target run
 run_OBJECTS = \
-"CMakeFiles/run.dir/src/main.o" \
-"CMakeFiles/run.dir/src/Game.o" \
-"CMakeFiles/run.dir/src/Window.o" \
-"CMakeFiles/run.dir/src/Controller.o" \
-"CMakeFiles/run.dir/src/Snake.o"
+"CMakeFiles/run.dir/src/main.cpp.o" \
+"CMakeFiles/run.dir/src/Game.cpp.o" \
+"CMakeFiles/run.dir/src/Window.cpp.o" \
+"CMakeFiles/run.dir/src/Controller.cpp.o" \
+"CMakeFiles/run.dir/src/Snake.cpp.o"
 
 # External object files for target run
 run_EXTERNAL_OBJECTS =
 
-run: CMakeFiles/run.dir/src/main.o
-run: CMakeFiles/run.dir/src/Game.o
-run: CMakeFiles/run.dir/src/Window.o
-run: CMakeFiles/run.dir/src/Controller.o
-run: CMakeFiles/run.dir/src/Snake.o
+run: CMakeFiles/run.dir/src/main.cpp.o
+run: CMakeFiles/run.dir/src/Game.cpp.o
+run: CMakeFiles/run.dir/src/Window.cpp.o
+run: CMakeFiles/run.dir/src/Controller.cpp.o
+run: CMakeFiles/run.dir/src/Snake.cpp.o
 run: CMakeFiles/run.dir/build.make
+run: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
+run: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1
+run: /usr/lib/x86_64-linux-gnu/libsfml-network.so.2.5.1
+run: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
+run: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 run: CMakeFiles/run.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run.dir/link.txt --verbose=$(VERBOSE)

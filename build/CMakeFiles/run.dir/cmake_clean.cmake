@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/run.dir/src/main.o"
-  "CMakeFiles/run.dir/src/Game.o"
-  "CMakeFiles/run.dir/src/Window.o"
-  "CMakeFiles/run.dir/src/Controller.o"
-  "CMakeFiles/run.dir/src/Snake.o"
+  "CMakeFiles/run.dir/src/main.cpp.o"
+  "CMakeFiles/run.dir/src/Game.cpp.o"
+  "CMakeFiles/run.dir/src/Window.cpp.o"
+  "CMakeFiles/run.dir/src/Controller.cpp.o"
+  "CMakeFiles/run.dir/src/Snake.cpp.o"
   "run.pdb"
   "run"
 )
