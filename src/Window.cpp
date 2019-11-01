@@ -23,7 +23,7 @@ void Window::create()
 {
   if(m_fullScreen)
   {
-    m_window.create(sf::VideoMode(1920,1080),m_name);
+    m_window.create(sf::VideoMode(1920,1080),m_name,sf::Style::Fullscreen);
   }
   else
   {
@@ -58,7 +58,7 @@ void Window::render(const sf::Drawable& l_entity)
 
 void Window::erase()
 {
-  m_window.clear();
+  m_window.clear(sf::Color(255,255,255,0.35));
   return;
 }
 

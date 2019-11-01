@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Projects/Snake/src/Controller.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Controller.cpp.o"
+  "/root/Projects/Snake/src/Food.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Food.cpp.o"
   "/root/Projects/Snake/src/Game.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Game.cpp.o"
   "/root/Projects/Snake/src/Snake.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Snake.cpp.o"
   "/root/Projects/Snake/src/Window.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Window.cpp.o"

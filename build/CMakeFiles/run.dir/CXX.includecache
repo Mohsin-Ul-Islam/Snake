@@ -14,23 +14,7 @@ deque
 iostream
 -
 
-.././include/Snake/Window.h
-SFML/Graphics.hpp
--
-string
--
-
-/root/Projects/Snake/src/main.cpp
-iostream
--
-cstdlib
--
-time.h
--
-SFML/Graphics.hpp
--
-Snake/Window.h
-/root/Projects/Snake/src/Snake/Window.h
+/root/Projects/Snake/src/Snake.cpp
 Snake/Snake.h
 /root/Projects/Snake/src/Snake/Snake.h
 

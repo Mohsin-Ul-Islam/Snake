@@ -4,20 +4,20 @@
 #include <SFML/Graphics.hpp>
 #include "Snake/Window.h"
 #include "Snake/Snake.h"
+#include "Snake/Food.h"
 
 int main(int argc, char* argv[])
 {
 
-    srand(time(0));
-
-    const int WIDTH     = 980;
-    const int HEIGHT    = 640;
+    const int WIDTH     = 1000;
+    const int HEIGHT    = 600;
     const int FRAMERATE = 60;
 
     Window window(WIDTH,HEIGHT,"Snake Game");
     window.self()->setFramerateLimit(FRAMERATE);
 
-    Snake snake(50,3);
+    Snake snake(40,3);
+    Food  food(40);
 
     sf::Clock clock;
 
@@ -34,22 +34,23 @@ int main(int argc, char* argv[])
       if(event.type == sf::Event::Closed) window.self()->close();
       if(event.type == sf::Event::KeyPressed)
       {
-        if(event.key.code == sf::Keyboard::Up && snake.getCalculatedDirection() != Direction::UP)
-        {
-          snake.setDirection(Direction::UP);
-        }
-        else if(event.key.code == sf::Keyboard::Down && snake.getCalculatedDirection() != Direction::DOWN)
-        {
-          snake.setDirection(Direction::DOWN);
-        }
-        else if(event.key.code == sf::Keyboard::Left && snake.getCalculatedDirection() != Direction::LEFT)
-        {
-          snake.setDirection(Direction::LEFT);
-        }
-        else if(event.key.code == sf::Keyboard::Right && snake.getCalculatedDirection() != Direction::RIGHT)
-        {
-          snake.setDirection(Direction::RIGHT);
-        }
+
+      }
+      if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && snake.getCalculatedDirection() != Direction::DOWN)
+      {
+        snake.setDirection(Direction::UP);
+      }
+      else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && snake.getCalculatedDirection() != Direction::UP)
+      {
+        snake.setDirection(Direction::DOWN);
+      }
+      else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && snake.getCalculatedDirection() != Direction::RIGHT)
+      {
+        snake.setDirection(Direction::LEFT);
+      }
+      else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && snake.getCalculatedDirection() != Direction::LEFT)
+      {
+        snake.setDirection(Direction::RIGHT);
       }
 
       if(accumulatedTime >= delay)
@@ -57,8 +58,15 @@ int main(int argc, char* argv[])
         accumulatedTime = 0;
         snake.move();
       }
+
+      if(snake.getPosition().x == food.getPosition().x && snake.getPosition().y == food.getPosition().y)
+      {
+        food.generate();
+        snake.grow();
+      }
       window.erase();
       snake.renderSnake(*window.self());
+      food.renderFood(*window.self());
       window.show();
     }
 

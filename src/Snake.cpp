@@ -34,8 +34,8 @@ void Snake::setDirection(const Direction& l_dir)
 
 void Snake::renderSnake(sf::RenderWindow& l_window)
 {
-  int offset = 5;
-
+  int offset = 10;
+  sf::Color prev = sf::Color::Yellow;
   for(int i = 0; i<m_snakeBody.size(); i++)
   {
     sf::RectangleShape piece(sf::Vector2f(m_size - offset,m_size - offset));
@@ -43,11 +43,13 @@ void Snake::renderSnake(sf::RenderWindow& l_window)
     piece.setPosition(sf::Vector2f(m_snakeBody[i].x * m_size,m_snakeBody[i].y * m_size));
     if(i == 0)
     {
-      piece.setFillColor(sf::Color::Red);
+      piece.setFillColor(prev);
     }
     else
     {
-      piece.setFillColor(sf::Color::Green);
+      sf::Color now = sf::Color(prev.r/i,prev.g/i,prev.b/i);
+      piece.setFillColor(now);
+      prev = now;
     }
     l_window.draw(piece);
   }
@@ -170,11 +172,11 @@ Direction Snake::getCalculatedDirection() const
   {
     if(snakeHead.y > snakeNeck.y)
     {
-      return Direction::UP;
+      return Direction::DOWN;
     }
     else if(snakeHead.y < snakeNeck.y)
     {
-      return Direction::DOWN;
+      return Direction::UP;
     }
   }
 
