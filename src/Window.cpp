@@ -67,13 +67,3 @@ void Window::show()
   m_window.display();
   return;
 }
-
-bool Window::live() const
-{
-  return m_window.isOpen();
-}
-
-sf::RenderWindow* Window::self()
-{
-  return &m_window;
-}

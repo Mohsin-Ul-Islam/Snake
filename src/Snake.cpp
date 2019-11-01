@@ -23,6 +23,8 @@ void Snake::init(const int& l_size, const int& l_lives)
   m_snakeBody.push_back(snakePiece(12,10));
   m_snakeBody.push_back(snakePiece(11,10));
   m_snakeBody.push_back(snakePiece(10,10));
+  m_halt = false;
+  m_score = 0;
   return;
 }
 
@@ -32,10 +34,21 @@ void Snake::setDirection(const Direction& l_dir)
   return;
 }
 
-void Snake::renderSnake(sf::RenderWindow& l_window)
+void Snake::setLivesCount(const int& l_lives)
+{
+  m_lives = l_lives;
+  return;
+}
+
+void Snake::setSize(const int& l_size)
+{
+  m_size = l_size;
+  return;
+}
+
+void Snake::render(sf::RenderWindow& l_window)
 {
   int offset = 10;
-  sf::Color prev = sf::Color::Yellow;
   for(int i = 0; i<m_snakeBody.size(); i++)
   {
     sf::RectangleShape piece(sf::Vector2f(m_size - offset,m_size - offset));
@@ -43,17 +56,29 @@ void Snake::renderSnake(sf::RenderWindow& l_window)
     piece.setPosition(sf::Vector2f(m_snakeBody[i].x * m_size,m_snakeBody[i].y * m_size));
     if(i == 0)
     {
-      piece.setFillColor(prev);
+      piece.setFillColor(sf::Color::Blue);
     }
     else
     {
-      sf::Color now = sf::Color(prev.r/i,prev.g/i,prev.b/i);
+      sf::Color now = sf::Color(0,0,0);
       piece.setFillColor(now);
-      prev = now;
     }
     l_window.draw(piece);
   }
+
   return;
+}
+
+bool Snake::isColliding(const sf::Vector2f& l_point) const
+{
+  for(int i = 0; i<m_snakeBody.size(); i++)
+  {
+    if(l_point.x == m_snakeBody[i].x && m_snakeBody[i].y == l_point.y)
+    {
+      return true;
+    }
+  }
+  return false;
 }
 
 void Snake::grow()
@@ -62,6 +87,7 @@ void Snake::grow()
   snakePiece tail     = m_snakeBody.back();
   snakePiece tailNeck = m_snakeBody[m_snakeBody.size() - 2];
   snakePiece toInsert(0,0);
+  m_score += 1;
 
   if(tail.y == tailNeck.y)
   {
@@ -91,9 +117,14 @@ void Snake::grow()
   return;
 }
 
+void Snake::halt()
+{
+  m_halt = true;
+}
+
 void Snake::move()
 {
-  if(m_dir == Direction::NONE)
+  if(m_dir == Direction::NONE || m_halt)
   {
     return;
   }
@@ -142,12 +173,32 @@ void Snake::move()
     m_snakeBody.insert(m_snakeBody.begin(),snakeHead);
   }
 
+  int index = selfColliding();
+
+  if(index)
+  {
+    m_lives -= 1;
+    for(int i = m_snakeBody.size() - 1; i>=index; i--)
+    {
+      m_snakeBody.pop_back();
+    }
+  }
+
   return;
 }
 
-Direction Snake::getDirection() const
+int Snake::selfColliding() const
 {
-  return m_dir;
+  snakePiece snakeHead = m_snakeBody[0];
+
+  for(int i = 1; i<m_snakeBody.size(); i++)
+  {
+    if(m_snakeBody[i].x == snakeHead.x && m_snakeBody[i].y == snakeHead.y)
+    {
+      return i;
+    }
+  }
+  return 0;
 }
 
 Direction Snake::getCalculatedDirection() const
@@ -181,9 +232,4 @@ Direction Snake::getCalculatedDirection() const
   }
 
   return Direction::NONE;
-}
-
-sf::Vector2f Snake::getPosition() const
-{
-  return sf::Vector2f(m_snakeBody.front().x,m_snakeBody.front().y);
 }

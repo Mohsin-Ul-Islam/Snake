@@ -2,7 +2,7 @@
 #define WINDOW_H
 
 #include <SFML/Graphics.hpp>
-#include <string>
+#include <iostream>
 
 class Window
 {
@@ -11,12 +11,12 @@ class Window
 
     Window(const int& l_width, const int& l_height, const std::string& l_name);
     void resize(const int& l_width, const int& l_height);
-    void toggleFullScreen();
+    void toggleFullScreen() ;
     void render(const sf::Drawable& l_entity);
     void erase();
     void show();
-    bool live() const;
-    sf::RenderWindow* self();
+    inline bool live() const {return m_window.isOpen();};
+    inline sf::RenderWindow* self() {return &m_window;};
     ~Window();
 
   private:

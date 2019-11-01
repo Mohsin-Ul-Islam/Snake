@@ -1,7 +1,7 @@
 #ifndef FOOD_H
 #define FOOD_H
 
-#include<SFML/Graphics.hpp>
+#include "Snake.h"
 
 class Food
 {
@@ -10,9 +10,10 @@ class Food
 
     Food();
     Food(const int& l_size);
-    void generate();
-    void renderFood(sf::RenderWindow& l_window);
-    sf::Vector2f getPosition() const;
+    void generate(const Snake& l_snake);
+    void render(sf::RenderWindow& l_window);
+    void setSize(const int& l_size);
+    inline sf::Vector2f getPosition() const {return m_position;};
     ~Food();
 
   private:

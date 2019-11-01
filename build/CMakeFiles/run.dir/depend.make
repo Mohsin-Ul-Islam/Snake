@@ -4,6 +4,7 @@
 CMakeFiles/run.dir/src/Controller.cpp.o: ../src/Controller.cpp
 
 CMakeFiles/run.dir/src/Food.cpp.o: .././include/Snake/Food.h
+CMakeFiles/run.dir/src/Food.cpp.o: .././include/Snake/Snake.h
 CMakeFiles/run.dir/src/Food.cpp.o: ../src/Food.cpp
 
 CMakeFiles/run.dir/src/Game.cpp.o: ../src/Game.cpp

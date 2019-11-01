@@ -15,30 +15,37 @@ Food::~Food()
 
 }
 
+void Food::setSize(const int& l_size)
+{
+  m_size = l_size;
+  return;
+}
+
 void Food::init(const int& l_size)
 {
   srand(time(0));
   m_size = l_size;
-  m_position.x =  1;
-  m_position.y =  1;
+  m_position.x =  rand() % 12 + 5;
+  m_position.y =  rand() % 7  + 5;
   m_color = sf::Color(rand() % 255, rand() % 255, rand() % 255);
   return;
 }
 
-void Food::generate()
+void Food::generate(const Snake& l_snake)
 {
-  m_position.x = rand() % 25 + 1;
-  m_position.y = rand() % 15 + 1;
+
   m_color = sf::Color(rand() % 255, rand() % 255, rand() % 255);
+  do
+  {
+    m_position.x = rand() % 25 + 1;
+    m_position.y = rand() % 15 + 1;
+
+  }while(l_snake.isColliding(sf::Vector2f(m_position)));
+
   return;
 }
 
-sf::Vector2f Food::getPosition() const
-{
-  return m_position;
-}
-
-void Food::renderFood(sf::RenderWindow& l_window)
+void Food::render(sf::RenderWindow& l_window)
 {
   int offset = 10;
   sf::RectangleShape food_box(sf::Vector2f(m_size - offset,m_size - offset));

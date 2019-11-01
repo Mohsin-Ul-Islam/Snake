@@ -1,10 +1,16 @@
-#include <iostream>
-#include <cstdlib>
-#include <time.h>
-#include <SFML/Graphics.hpp>
+#include <sstream>
 #include "Snake/Window.h"
 #include "Snake/Snake.h"
 #include "Snake/Food.h"
+
+std::string toString(const int& l_val)
+{
+  std::stringstream converter;
+  converter<<l_val;
+  std::string result;
+  converter>>result;
+  return result;
+}
 
 int main(int argc, char* argv[])
 {
@@ -19,7 +25,20 @@ int main(int argc, char* argv[])
     Snake snake(40,3);
     Food  food(40);
 
+    std::string log;
+
     sf::Clock clock;
+
+    sf::Font font;
+    font.loadFromFile("../assets/fonts/Roboto/Roboto-Black.ttf");
+    sf::Text text;
+    text.setFont(font);
+    text.setCharacterSize(32);
+    text.setFillColor(sf::Color::Black);
+    text.setPosition(sf::Vector2f(10,10));
+
+    int frames = 0;
+    float frameTime = 0;
 
 
     float delay = 0.1f;
@@ -27,8 +46,16 @@ int main(int argc, char* argv[])
 
     while(window.live())
     {
+      frames += 1;
       accumulatedTime += clock.getElapsedTime().asSeconds();
+      frameTime += clock.getElapsedTime().asSeconds();
       clock.restart();
+      int frameRate = frames/frameTime;
+      if(frameTime >= 1)
+      {
+        frames = 0;
+        frameTime -= 1;
+      }
       sf::Event event;
       window.self()->pollEvent(event);
       if(event.type == sf::Event::Closed) window.self()->close();
@@ -55,19 +82,29 @@ int main(int argc, char* argv[])
 
       if(accumulatedTime >= delay)
       {
-        accumulatedTime = 0;
+        accumulatedTime -= delay;
         snake.move();
       }
 
       if(snake.getPosition().x == food.getPosition().x && snake.getPosition().y == food.getPosition().y)
       {
-        food.generate();
+        food.generate(snake);
         snake.grow();
       }
+
+      if(!snake.getLives())
+      {
+        snake.halt();
+        log += "Game over!";
+      }
+      log += "Lives Remaining: " + toString(snake.getLives()) + "| Score: " + toString(snake.getScore()) + "| Frame Rate: " + toString(frameRate);
+      text.setString(log);
       window.erase();
-      snake.renderSnake(*window.self());
-      food.renderFood(*window.self());
+      snake.render(*window.self());
+      food.render(*window.self());
+      window.render(text);
       window.show();
+      log = "";
     }
 
     return 0;
