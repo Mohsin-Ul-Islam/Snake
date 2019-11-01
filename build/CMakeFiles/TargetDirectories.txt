@@ -1,3 +1,6 @@
 /root/Projects/Snake/build/CMakeFiles/rebuild_cache.dir
 /root/Projects/Snake/build/CMakeFiles/run.dir
 /root/Projects/Snake/build/CMakeFiles/edit_cache.dir
+/root/Projects/Snake/build/libs/Console/CMakeFiles/rebuild_cache.dir
+/root/Projects/Snake/build/libs/Console/CMakeFiles/console.dir
+/root/Projects/Snake/build/libs/Console/CMakeFiles/edit_cache.dir

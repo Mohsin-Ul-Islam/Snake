@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+AssetManager_BINARY_DIR:STATIC=/root/Projects/Snake/build/libs/AssetManager
+
+//Value Computed by CMake
+AssetManager_SOURCE_DIR:STATIC=/root/Projects/Snake/libs/AssetManager
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -204,6 +210,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+Console_BINARY_DIR:STATIC=/root/Projects/Snake/build/libs/Console
+
+//Value Computed by CMake
+Console_SOURCE_DIR:STATIC=/root/Projects/Snake/libs/Console
+
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
@@ -323,7 +335,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+.././include/Snake/AssetManager.h
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+map
+-
+
 .././include/Snake/Food.h
 Snake.h
 .././include/Snake/Snake.h
@@ -24,10 +32,6 @@ SFML/Graphics.hpp
 iostream
 -
 
-/root/Projects/Snake/src/Window.cpp
-Snake/Window.h
-/root/Projects/Snake/src/Snake/Window.h
-
 /root/Projects/Snake/src/main.cpp
 sstream
 -
@@ -37,4 +41,6 @@ Snake/Snake.h
 /root/Projects/Snake/src/Snake/Snake.h
 Snake/Food.h
 /root/Projects/Snake/src/Snake/Food.h
+Snake/AssetManager.h
+/root/Projects/Snake/src/Snake/AssetManager.h
 

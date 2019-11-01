@@ -2,6 +2,7 @@
 #include "Snake/Window.h"
 #include "Snake/Snake.h"
 #include "Snake/Food.h"
+#include "Snake/AssetManager.h"
 
 std::string toString(const int& l_val)
 {
@@ -17,10 +18,13 @@ int main(int argc, char* argv[])
 
     const int WIDTH     = 1000;
     const int HEIGHT    = 600;
-    const int FRAMERATE = 60;
+    const int FRAMERATE = 80;
 
     Window window(WIDTH,HEIGHT,"Snake Game");
-    window.self()->setFramerateLimit(FRAMERATE);
+    //window.self()->setFramerateLimit(FRAMERATE);
+    //window.self()->setVerticalSyncEnabled(true);
+
+    AssetManager manager;
 
     Snake snake(40,3);
     Food  food(40);

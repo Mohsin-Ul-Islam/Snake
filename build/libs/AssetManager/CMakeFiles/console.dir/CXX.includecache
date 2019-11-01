@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libs/Console/./include/Console/Console.h
+iostream
+-
+string
+-
+stdlib.h
+-
+
+/root/Projects/Snake/libs/Console/src/Console.cpp
+Console/Console.h
+/root/Projects/Snake/libs/Console/src/Console/Console.h
+

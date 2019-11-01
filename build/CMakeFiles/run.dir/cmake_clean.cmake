@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/run.dir/src/Controller.cpp.o"
   "CMakeFiles/run.dir/src/Snake.cpp.o"
   "CMakeFiles/run.dir/src/Food.cpp.o"
+  "CMakeFiles/run.dir/src/AssetManager.cpp.o"
   "run.pdb"
   "run"
 )

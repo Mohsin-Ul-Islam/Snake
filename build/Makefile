@@ -123,6 +123,46 @@ run/fast:
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
 .PHONY : run/fast
 
+#=============================================================================
+# Target rules for targets named console
+
+# Build rule for target.
+console: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 console
+.PHONY : console
+
+# fast build rule for target.
+console/fast:
+	$(MAKE) -f libs/Console/CMakeFiles/console.dir/build.make libs/Console/CMakeFiles/console.dir/build
+.PHONY : console/fast
+
+src/AssetManager.o: src/AssetManager.cpp.o
+
+.PHONY : src/AssetManager.o
+
+# target to build an object file
+src/AssetManager.cpp.o:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/AssetManager.cpp.o
+.PHONY : src/AssetManager.cpp.o
+
+src/AssetManager.i: src/AssetManager.cpp.i
+
+.PHONY : src/AssetManager.i
+
+# target to preprocess a source file
+src/AssetManager.cpp.i:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/AssetManager.cpp.i
+.PHONY : src/AssetManager.cpp.i
+
+src/AssetManager.s: src/AssetManager.cpp.s
+
+.PHONY : src/AssetManager.s
+
+# target to generate assembly for a file
+src/AssetManager.cpp.s:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/AssetManager.cpp.s
+.PHONY : src/AssetManager.cpp.s
+
 src/Controller.o: src/Controller.cpp.o
 
 .PHONY : src/Controller.o
@@ -294,6 +334,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... run"
 	@echo "... edit_cache"
+	@echo "... console"
+	@echo "... src/AssetManager.o"
+	@echo "... src/AssetManager.i"
+	@echo "... src/AssetManager.s"
 	@echo "... src/Controller.o"
 	@echo "... src/Controller.i"
 	@echo "... src/Controller.s"

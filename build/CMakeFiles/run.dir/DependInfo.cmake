@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/root/Projects/Snake/src/AssetManager.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/AssetManager.cpp.o"
   "/root/Projects/Snake/src/Controller.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Controller.cpp.o"
   "/root/Projects/Snake/src/Food.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Food.cpp.o"
   "/root/Projects/Snake/src/Game.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Game.cpp.o"
@@ -21,6 +22,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/root/Projects/Snake/build/libs/Console/CMakeFiles/console.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
