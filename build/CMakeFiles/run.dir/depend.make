@@ -5,9 +5,13 @@ CMakeFiles/run.dir/src/Controller.cpp.o: ../src/Controller.cpp
 
 CMakeFiles/run.dir/src/Game.cpp.o: ../src/Game.cpp
 
+CMakeFiles/run.dir/src/Snake.cpp.o: .././include/Snake/Snake.h
 CMakeFiles/run.dir/src/Snake.cpp.o: ../src/Snake.cpp
 
+CMakeFiles/run.dir/src/Window.cpp.o: .././include/Snake/Window.h
 CMakeFiles/run.dir/src/Window.cpp.o: ../src/Window.cpp
 
+CMakeFiles/run.dir/src/main.cpp.o: .././include/Snake/Snake.h
+CMakeFiles/run.dir/src/main.cpp.o: .././include/Snake/Window.h
 CMakeFiles/run.dir/src/main.cpp.o: ../src/main.cpp
 

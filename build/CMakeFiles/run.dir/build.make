@@ -140,8 +140,6 @@ run: CMakeFiles/run.dir/src/Controller.cpp.o
 run: CMakeFiles/run.dir/src/Snake.cpp.o
 run: CMakeFiles/run.dir/build.make
 run: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
-run: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1
-run: /usr/lib/x86_64-linux-gnu/libsfml-network.so.2.5.1
 run: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 run: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 run: CMakeFiles/run.dir/link.txt

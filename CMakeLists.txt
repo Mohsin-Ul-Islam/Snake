@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 project(Snake)
 include_directories(./include ./src)
-find_package(SFML 2.5 COMPONENTS graphics audio system network REQUIRED)
+find_package(SFML 2.5 COMPONENTS graphics system REQUIRED)
 add_executable(run ./src/main.cpp ./src/Game.cpp ./src/Window.cpp ./src/Controller.cpp ./src/Snake.cpp)
-target_link_libraries(run sfml-graphics sfml-audio sfml-system sfml-network)
+target_link_libraries(run sfml-graphics sfml-system)

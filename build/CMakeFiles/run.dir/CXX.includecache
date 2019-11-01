@@ -6,7 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/root/Projects/Snake/src/main.cpp
+.././include/Snake/Snake.h
 SFML/Graphics.hpp
 -
+deque
+-
+iostream
+-
+
+.././include/Snake/Window.h
+SFML/Graphics.hpp
+-
+string
+-
+
+/root/Projects/Snake/src/main.cpp
+iostream
+-
+cstdlib
+-
+time.h
+-
+SFML/Graphics.hpp
+-
+Snake/Window.h
+/root/Projects/Snake/src/Snake/Window.h
+Snake/Snake.h
+/root/Projects/Snake/src/Snake/Snake.h
 
