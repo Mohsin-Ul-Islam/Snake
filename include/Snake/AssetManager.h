@@ -4,6 +4,7 @@
 #include<SFML/Graphics.hpp>
 #include<SFML/Audio.hpp>
 #include<map>
+#include "Console/Console.h"
 
 class AssetManager
 {
@@ -23,9 +24,9 @@ class AssetManager
 
     void clean();
 
-    inline sf::Texture getTexture(const std::string& l_tex) const {return m_textures.at(l_tex);};
-    inline sf::Font getFont(const std::string& l_font) const {return m_fonts.at(l_font);};
-    inline sf::Sound getSound(const std::string& l_sound) const {return m_sounds.at(l_sound);};
+    inline sf::Texture& getTexture(const std::string& l_tex)  {return m_textures.at(l_tex);};
+    inline sf::Font& getFont(const std::string& l_font)  {return m_fonts.at(l_font);};
+    inline sf::SoundBuffer& getSound(const std::string& l_sound)  {return m_sounds.at(l_sound);};
 
   private:
 
@@ -35,7 +36,7 @@ class AssetManager
 
     std::map<std::string,sf::Texture> m_textures;
     std::map<std::string,sf::Font> m_fonts;
-    std::map<std::string,sf::Sound> m_sounds;
+    std::map<std::string,sf::SoundBuffer> m_sounds;
 };
 
 #endif

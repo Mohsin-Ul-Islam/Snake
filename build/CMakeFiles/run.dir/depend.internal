@@ -3,6 +3,7 @@
 
 CMakeFiles/run.dir/src/AssetManager.cpp.o
  .././include/Snake/AssetManager.h
+ .././libs/Console/include/Console/Console.h
  /root/Projects/Snake/src/AssetManager.cpp
 CMakeFiles/run.dir/src/Controller.cpp.o
  /root/Projects/Snake/src/Controller.cpp
@@ -11,6 +12,14 @@ CMakeFiles/run.dir/src/Food.cpp.o
  .././include/Snake/Snake.h
  /root/Projects/Snake/src/Food.cpp
 CMakeFiles/run.dir/src/Game.cpp.o
+ .././include/Snake/AssetManager.h
+ .././include/Snake/Food.h
+ .././include/Snake/Game.h
+ .././include/Snake/Snake.h
+ .././include/Snake/Window.h
+ .././include/Snake/World.h
+ .././libs/Console/include/Console/Console.h
+ .././src/Globals.h
  /root/Projects/Snake/src/Game.cpp
 CMakeFiles/run.dir/src/Snake.cpp.o
  .././include/Snake/Snake.h
@@ -18,9 +27,18 @@ CMakeFiles/run.dir/src/Snake.cpp.o
 CMakeFiles/run.dir/src/Window.cpp.o
  .././include/Snake/Window.h
  /root/Projects/Snake/src/Window.cpp
+CMakeFiles/run.dir/src/World.cpp.o
+ .././include/Snake/Food.h
+ .././include/Snake/Snake.h
+ .././include/Snake/World.h
+ /root/Projects/Snake/src/World.cpp
 CMakeFiles/run.dir/src/main.cpp.o
  .././include/Snake/AssetManager.h
  .././include/Snake/Food.h
+ .././include/Snake/Game.h
  .././include/Snake/Snake.h
  .././include/Snake/Window.h
+ .././include/Snake/World.h
+ .././libs/Console/include/Console/Console.h
+ .././src/Globals.h
  /root/Projects/Snake/src/main.cpp

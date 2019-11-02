@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/root/Projects/Snake/./include -I/root/Projects/Snake/./src -I/root/Projects/Snake/libs/Console/./include -I/root/Projects/Snake/libs/Console/./src 
+CXX_INCLUDES = -I/root/Projects/Snake/./include -I/root/Projects/Snake/./src -I/root/Projects/Snake/./libs/Console/src -I/root/Projects/Snake/./libs/Console/include -I/root/Projects/Snake/libs/Console/./include -I/root/Projects/Snake/libs/Console/./src 
 

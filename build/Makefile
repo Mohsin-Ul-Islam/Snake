@@ -298,6 +298,33 @@ src/Window.cpp.s:
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/Window.cpp.s
 .PHONY : src/Window.cpp.s
 
+src/World.o: src/World.cpp.o
+
+.PHONY : src/World.o
+
+# target to build an object file
+src/World.cpp.o:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/World.cpp.o
+.PHONY : src/World.cpp.o
+
+src/World.i: src/World.cpp.i
+
+.PHONY : src/World.i
+
+# target to preprocess a source file
+src/World.cpp.i:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/World.cpp.i
+.PHONY : src/World.cpp.i
+
+src/World.s: src/World.cpp.s
+
+.PHONY : src/World.s
+
+# target to generate assembly for a file
+src/World.cpp.s:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/World.cpp.s
+.PHONY : src/World.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -353,6 +380,9 @@ help:
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"
+	@echo "... src/World.o"
+	@echo "... src/World.i"
+	@echo "... src/World.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Projects/Snake/src/Game.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Game.cpp.o"
   "/root/Projects/Snake/src/Snake.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Snake.cpp.o"
   "/root/Projects/Snake/src/Window.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/Window.cpp.o"
+  "/root/Projects/Snake/src/World.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/World.cpp.o"
   "/root/Projects/Snake/src/main.cpp" "/root/Projects/Snake/build/CMakeFiles/run.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -18,6 +19,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././include"
   ".././src"
+  ".././libs/Console/src"
+  ".././libs/Console/include"
   )
 
 # Targets to which this target links.

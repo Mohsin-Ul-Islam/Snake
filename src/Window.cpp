@@ -1,10 +1,17 @@
 #include "Snake/Window.h"
 
+
+Window::Window()
+{
+  
+}
+
 Window::Window(const int& l_width, const int& l_height, const std::string& l_name)
 {
   m_width  = l_width;
   m_height = l_height;
   m_name   = l_name;
+  m_fullScreen = false;
   create();
 }
 
@@ -30,6 +37,32 @@ void Window::create()
     m_window.create(sf::VideoMode(m_width,m_height),m_name);
   }
 
+  m_window.setFramerateLimit(m_frames);
+
+  return;
+}
+
+void Window::setFrameRate(const int& l_frames)
+{
+  m_frames = l_frames;
+  return;
+}
+
+void Window::setName(const std::string& l_name)
+{
+  m_name = l_name;
+  return;
+}
+
+void Window::setWidth(const int& l_width)
+{
+  m_width = l_width;
+  return;
+}
+
+void Window::setHeight(const int& l_height)
+{
+  m_height = l_height;
   return;
 }
 
@@ -56,9 +89,9 @@ void Window::render(const sf::Drawable& l_entity)
   return;
 }
 
-void Window::erase()
+void Window::erase(const sf::Color& l_color)
 {
-  m_window.clear(sf::Color(255,255,255,0.35));
+  m_window.clear(l_color);
   return;
 }
 
