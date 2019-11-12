@@ -9,40 +9,31 @@ Game::Game()
 
 Game::~Game()
 {
-
+  delete m_world;
+  delete m_window;
+  delete m_manager;
 }
 
 void Game::initialize()
 {
+  m_manager->addSound(FOOD_EAT);
+  m_manager->addTexture(BACKGROUND_IMAGE);
+  m_manager->addFont(MAIN_FONT);
+
+  m_text.setFont(m_manager->getFont(MAIN_FONT));
+  m_text.setCharacterSize(18);
+  m_text.setFillColor(sf::Color::White);
+  m_text.setPosition(50,50);
+
+  m_food_eaten.setBuffer(m_manager->getSound(FOOD_EAT));
   m_isEnd = false;
+  m_world->setEntitySize(40);
+  m_window->setFrameRate(60);
+  m_window->setWidth(1280);
+  m_window->setHeight(640);
+  m_window->setName("Snake");
+  m_window->toggleFullScreen();
   m_window->create();
-}
-
-void Game::setFrameRate(const int& l_frames)
-{
-  m_window->setFrameRate(l_frames);
-}
-
-void Game::setWindowWidth(const int& l_width)
-{
-  m_window->setWidth(l_width);
-  return;
-}
-
-void Game::setWindowHeight(const int& l_height)
-{
-  m_window->setHeight(l_height);
-  return;
-}
-
-void Game::setEntitySize(const int& l_size)
-{
-  m_world->setEntitySize(l_size);
-}
-
-void Game::setWindowName(const std::string& l_name)
-{
-  m_window->setName(l_name);
 }
 
 void Game::handleInput()
@@ -77,26 +68,55 @@ void Game::handleInput()
 
 void Game::update()
 {
+  m_messages.clear();
+  m_messages.push_back("Snake Position: (" + toString(m_world->snake().getPosition().x) + "," + toString(m_world->snake().getPosition().y) + ")");
+  m_messages.push_back("Food Position: (" + toString(m_world->food().getPosition().x) + "," + toString(m_world->food().getPosition().y) + ")");
+  m_messages.push_back("Lives Remaining: " + toString(m_world->snake().getLives()));
+  
   m_world->snake().move();
 
   if(m_world->snake().getPosition().x == m_world->food().getPosition().x && m_world->snake().getPosition().y == m_world->food().getPosition().y)
   {
-    //food_eat.play();
+    m_food_eaten.play();
     m_world->food().generate(m_world->snake());
     m_world->snake().grow();
+
+    //m_messages.push_back("Food eaten at: (" + toString(m_world->snake().getPosition().x) + "," + toString(m_world->snake().getPosition().y) + ")");
   }
 
   if(!m_world->snake().getLives())
   {
     m_world->snake().halt();
     m_isEnd = true;
+    return;
   }
+
+
+
+
+  return;
 }
 
 void Game::render()
 {
-  m_window->erase(sf::Color::White);
+  std::string result;
+  m_window->erase(sf::Color::Black);
   m_world->render(*m_window->self());
+  for(int i = 0; i<m_messages.size(); i++)
+  {
+    result += m_messages[i] + "\n";
+  }
+  m_text.setString(result);
+  m_window->render(m_text);
   m_window->show();
   return;
+}
+
+std::string Game::toString(const int& l_val)
+{
+  std::stringstream converter;
+  converter<<l_val;
+  std::string result;
+  converter>>result;
+  return result;
 }

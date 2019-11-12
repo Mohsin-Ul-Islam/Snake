@@ -25,6 +25,8 @@ class World
     Snake m_snake;
     Food  m_food;
 
+    sf::RectangleShape boundaries[4];
+
 };
 
 #endif

@@ -21,6 +21,8 @@ Snake.h
 .././include/Snake/Snake.h
 
 .././include/Snake/Game.h
+sstream
+-
 Snake/Window.h
 .././include/Snake/Snake/Window.h
 Snake/World.h
@@ -60,9 +62,7 @@ stdlib.h
 
 .././src/Globals.h
 
-/root/Projects/Snake/src/main.cpp
-sstream
--
+/root/Projects/Snake/src/Game.cpp
 Snake/Game.h
 /root/Projects/Snake/src/Snake/Game.h
 

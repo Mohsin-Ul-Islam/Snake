@@ -56,12 +56,11 @@ void Snake::render(sf::RenderWindow& l_window)
     piece.setPosition(sf::Vector2f(m_snakeBody[i].x * m_size,m_snakeBody[i].y * m_size));
     if(i == 0)
     {
-      piece.setFillColor(sf::Color::Blue);
+      piece.setFillColor(sf::Color::Red);
     }
     else
     {
-      sf::Color now = sf::Color(0,0,0);
-      piece.setFillColor(now);
+      piece.setFillColor(sf::Color::White);
     }
     l_window.draw(piece);
   }

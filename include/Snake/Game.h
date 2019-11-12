@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <sstream>
 #include "Snake/Window.h"
 #include "Snake/World.h"
 #include "Snake/AssetManager.h"
@@ -13,11 +14,6 @@ class Game
 
     Game();
     void initialize();
-    void setFrameRate(const int& l_frames);
-    void setWindowName(const std::string& l_name);
-    void setEntitySize(const int& l_size);
-    void setWindowWidth(const int& l_width);
-    void setWindowHeight(const int& l_height);
     void update();
     void render();
     void handleInput();
@@ -28,10 +24,18 @@ class Game
 
   private:
 
+    std::string toString(const int& l_val);
+
+
     bool         m_isEnd;
     World*        m_world;
     Window*       m_window;
     AssetManager* m_manager;
+
+    std::deque<std::string> m_messages;
+
+    sf::Sound m_food_eaten;
+    sf::Text  m_text;
 
 };
 
