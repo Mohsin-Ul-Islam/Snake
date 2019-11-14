@@ -25,8 +25,8 @@ void Food::init(const int& l_size)
 {
   srand(time(0));
   m_size = l_size;
-  m_position.x =  rand() % 12 + 5;
-  m_position.y =  rand() % 7  + 5;
+  m_position.x =  rand() % 47 + 1;
+  m_position.y =  rand() % 26 + 1;
   m_color = sf::Color(rand() % 255, rand() % 255, rand() % 255);
   return;
 }
@@ -37,8 +37,8 @@ void Food::generate(const Snake& l_snake)
   m_color = sf::Color(rand() % 255, rand() % 255, rand() % 255);
   do
   {
-    m_position.x = rand() % 25 + 1;
-    m_position.y = rand() % 15 + 1;
+    m_position.x = rand() % 47 + 1;
+    m_position.y = rand() % 26 + 1;
 
   }while(l_snake.isColliding(sf::Vector2f(m_position)));
 

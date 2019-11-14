@@ -5,6 +5,7 @@ Game::Game()
   m_world   = new World;
   m_window  = new Window;
   m_manager = new AssetManager;
+  m_states  = new GameState;
 }
 
 Game::~Game()
@@ -16,22 +17,21 @@ Game::~Game()
 
 void Game::initialize()
 {
-  m_manager->addSound(FOOD_EAT);
-  m_manager->addTexture(BACKGROUND_IMAGE);
-  m_manager->addFont(MAIN_FONT);
+  m_delay = 0.1f;
 
-  m_text.setFont(m_manager->getFont(MAIN_FONT));
+  m_manager->addSoundBuffer("food eat",FOOD_EAT);
+  m_manager->addFont("main font",MAIN_FONT);
+
+  m_text.setFont(m_manager->getFont("main font"));
   m_text.setCharacterSize(18);
   m_text.setFillColor(sf::Color::White);
   m_text.setPosition(50,50);
 
-  m_food_eaten.setBuffer(m_manager->getSound(FOOD_EAT));
+  m_food_eaten.setBuffer(m_manager->getSoundBuffer("food eat"));
   m_isEnd = false;
   m_world->setEntitySize(40);
-  m_window->setFrameRate(60);
-  m_window->setWidth(1280);
-  m_window->setHeight(640);
-  m_window->setName("Snake");
+  m_window->self()->setFramerateLimit(60);
+  m_window->self()->setTitle("Snake");
   m_window->toggleFullScreen();
   m_window->create();
 }
@@ -66,14 +66,25 @@ void Game::handleInput()
   }
 }
 
-void Game::update()
+void Game::update(float& dt)
 {
   m_messages.clear();
   m_messages.push_back("Snake Position: (" + toString(m_world->snake().getPosition().x) + "," + toString(m_world->snake().getPosition().y) + ")");
   m_messages.push_back("Food Position: (" + toString(m_world->food().getPosition().x) + "," + toString(m_world->food().getPosition().y) + ")");
   m_messages.push_back("Lives Remaining: " + toString(m_world->snake().getLives()));
-  
-  m_world->snake().move();
+  m_messages.push_back("Score: " + toString(m_world->snake().getScore()));
+
+  if(dt >= m_delay)
+  {
+    m_world->snake().move();
+    dt -= m_delay;
+  }
+
+  if(m_world->snake().getPosition().x <= 0 || m_world->snake().getPosition().x >= 48 || m_world->snake().getPosition().y <= 0 || m_world->snake().getPosition().y >= 27)
+  {
+    m_isEnd = true;
+    return;
+  }
 
   if(m_world->snake().getPosition().x == m_world->food().getPosition().x && m_world->snake().getPosition().y == m_world->food().getPosition().y)
   {
@@ -88,7 +99,6 @@ void Game::update()
   {
     m_world->snake().halt();
     m_isEnd = true;
-    return;
   }
 
 

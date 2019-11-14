@@ -12,8 +12,7 @@ int main(int argc, char* argv[])
     myGame.initialize();
 
     sf::Clock clock;
-
-    float delay = 0.1f;
+    
     float accum = 0.0f;
 
     while(!myGame.isEnd())
@@ -21,11 +20,7 @@ int main(int argc, char* argv[])
       accum += clock.getElapsedTime().asSeconds();
       clock.restart();
       myGame.handleInput();
-      if(accum >= delay)
-      {
-        accum -= delay;
-        myGame.update();
-      }
+      myGame.update(accum);
       myGame.render();
     }
 

@@ -3,7 +3,7 @@
 
 Window::Window()
 {
-  
+
 }
 
 Window::Window(const int& l_width, const int& l_height, const std::string& l_name)
@@ -30,41 +30,16 @@ void Window::create()
 {
   if(m_fullScreen)
   {
-    m_window.create(sf::VideoMode(1920,1080),m_name,sf::Style::Fullscreen);
+    m_window.create(sf::VideoMode(sf::VideoMode::getDesktopMode().width,sf::VideoMode::getDesktopMode().height,sf::VideoMode::getDesktopMode().bitsPerPixel),m_name,sf::Style::Fullscreen);
   }
   else
   {
     m_window.create(sf::VideoMode(m_width,m_height),m_name);
   }
 
-  m_window.setFramerateLimit(m_frames);
-
   return;
 }
 
-void Window::setFrameRate(const int& l_frames)
-{
-  m_frames = l_frames;
-  return;
-}
-
-void Window::setName(const std::string& l_name)
-{
-  m_name = l_name;
-  return;
-}
-
-void Window::setWidth(const int& l_width)
-{
-  m_width = l_width;
-  return;
-}
-
-void Window::setHeight(const int& l_height)
-{
-  m_height = l_height;
-  return;
-}
 
 void Window::toggleFullScreen()
 {
