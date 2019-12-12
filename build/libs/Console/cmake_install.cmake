@@ -1,4 +1,4 @@
-# Install script for directory: /root/Projects/Snake/libs/Console
+# Install script for directory: /home/aqua/projects/Snake/libs/Console
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

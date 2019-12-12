@@ -1,4 +1,4 @@
-# Install script for directory: /root/Projects/Snake
+# Install script for directory: /home/aqua/projects/Snake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/root/Projects/Snake/build/libs/Console/cmake_install.cmake")
+  include("/home/aqua/projects/Snake/build/libs/Console/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/root/Projects/Snake/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aqua/projects/Snake/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

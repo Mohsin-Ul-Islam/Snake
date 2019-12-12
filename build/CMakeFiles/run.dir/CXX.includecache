@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-.././include/Snake/AssetManager.h
+../include/Snake/AssetManager.h
 SFML/Graphics.hpp
 -
 SFML/Audio.hpp
@@ -14,25 +14,31 @@ SFML/Audio.hpp
 map
 -
 Console/Console.h
-.././include/Snake/Console/Console.h
+../include/Snake/Console/Console.h
 
-.././include/Snake/Food.h
+../include/Snake/Food.h
 Snake.h
-.././include/Snake/Snake.h
+../include/Snake/Snake.h
 
-.././include/Snake/Game.h
+../include/Snake/Game.h
 sstream
 -
 Snake/Window.h
-.././include/Snake/Snake/Window.h
+../include/Snake/Snake/Window.h
 Snake/World.h
-.././include/Snake/Snake/World.h
+../include/Snake/Snake/World.h
 Snake/AssetManager.h
-.././include/Snake/Snake/AssetManager.h
+../include/Snake/Snake/AssetManager.h
 Globals.h
-.././include/Snake/Globals.h
+../include/Snake/Globals.h
+Snake/GameState.h
+../include/Snake/Snake/GameState.h
 
-.././include/Snake/Snake.h
+../include/Snake/GameState.h
+SFML/Graphics.hpp
+-
+
+../include/Snake/Snake.h
 SFML/Graphics.hpp
 -
 deque
@@ -40,19 +46,19 @@ deque
 iostream
 -
 
-.././include/Snake/Window.h
+../include/Snake/Window.h
 SFML/Graphics.hpp
 -
 iostream
 -
 
-.././include/Snake/World.h
+../include/Snake/World.h
 Snake/Snake.h
-.././include/Snake/Snake/Snake.h
+../include/Snake/Snake/Snake.h
 Snake/Food.h
-.././include/Snake/Snake/Food.h
+../include/Snake/Snake/Food.h
 
-.././libs/Console/include/Console/Console.h
+../libs/Console/include/Console/Console.h
 iostream
 -
 string
@@ -60,9 +66,35 @@ string
 stdlib.h
 -
 
-.././src/Globals.h
+../src/Globals.h
 
-/root/Projects/Snake/src/Game.cpp
+/home/aqua/projects/Snake/src/AssetManager.cpp
+Snake/AssetManager.h
+/home/aqua/projects/Snake/src/Snake/AssetManager.h
+
+/home/aqua/projects/Snake/src/Controller.cpp
+
+/home/aqua/projects/Snake/src/Food.cpp
+Snake/Food.h
+/home/aqua/projects/Snake/src/Snake/Food.h
+
+/home/aqua/projects/Snake/src/Game.cpp
 Snake/Game.h
-/root/Projects/Snake/src/Snake/Game.h
+/home/aqua/projects/Snake/src/Snake/Game.h
+
+/home/aqua/projects/Snake/src/Snake.cpp
+Snake/Snake.h
+/home/aqua/projects/Snake/src/Snake/Snake.h
+
+/home/aqua/projects/Snake/src/Window.cpp
+Snake/Window.h
+/home/aqua/projects/Snake/src/Snake/Window.h
+
+/home/aqua/projects/Snake/src/World.cpp
+Snake/World.h
+/home/aqua/projects/Snake/src/Snake/World.h
+
+/home/aqua/projects/Snake/src/main.cpp
+Snake/Game.h
+/home/aqua/projects/Snake/src/Snake/Game.h
 
